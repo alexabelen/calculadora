@@ -8,6 +8,7 @@ var operando="";
 function sumaNumeros(num1,num2){
     return num1+num2;
 }
+
 function restaNumeros(num1,num2){
     return num1-num2;
 }
@@ -16,6 +17,13 @@ function multiplicaNumeros(num1,num2){
 }
 function divideNumeros(num1,num2){
     return num1/num2;
+}
+function exponenciarNumeros(num1,num2){
+    return num1**num2;
+}
+function raizNumeros(num1,num2){
+    num2-1/num2;
+    return num1**num2;
 }
 function imprimir(a)
 {
@@ -37,19 +45,30 @@ function resultadoFinal()
 {
     
     numero2=parseInt(texto);
+
     if (operando=="+") {
     resultado=sumaNumeros(numero1,numero2);
     }
     else if(operando =="-"){
         resultado=restaNumeros(numero1,numero2);
     }
-    else if(operando =="*"){
+    else if(operando =="x"){
         resultado=multiplicaNumeros(numero1,numero2);
     }
     else if(operando =="/"){
         resultado=divideNumeros(numero1,numero2);
     }
+    else if(operando =="**"){
+        resultado=exponenciarNumeros(numero1,numero2);
+    }
+    else if(operando =="r"){
+        resultado=raizNumeros(numero1,numero2);
+    }
     document.getElementById("mostrar").innerHTML=resultado;
+    texto=""
+    textoAuxiliar="";
+    num1=null;
+    num2=null;
 }
 
 
